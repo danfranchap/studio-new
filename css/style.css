@@ -1,0 +1,509 @@
+/* 
+Project Name: Studio Em
+Client: Emily Chapdelaine
+Author: Danielle Chapdelaine
+Developer @GA in Boston
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+     clear: both;
+}
+
+.alignright {
+     float: right; 
+     padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+     float: left; 
+     padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: 'Lato', Helvetica, sans-serif;
+}
+
+a {
+     color: white;
+     text-decoration: underline;
+}
+
+a:hover{
+     color: gray;
+}
+
+ul{
+     padding: 0px 0px 0px 0px;
+}
+
+.left{
+     text-align: right;
+}
+
+/************************************************************
+/* LAYOUT                   
+/************************************************************/
+
+/*****************************
+/* SHOWME'S  
+
+.showMe{
+     border: 2px solid yellow;
+}
+
+.showMe2{
+     border: 2px solid pink;
+}
+
+.showMe3{
+     border: 2px solid blue;
+}
+
+
+/*****************************/
+
+#preHeader{
+    /* height: 40px; */
+     padding: 5px 15px;
+}
+
+#preHeader p{
+     float: left;
+     margin: 0px 0px;
+     font-size: 1.3em;
+     font-weight: 400;
+}
+
+#preHeader a{
+     display: inline;
+     float: right;
+     color: black;
+     padding-left: 10px;
+     padding-top: 6px;
+     font-size: 1.6em;
+}
+
+#preHeaderPhone{
+     padding-left: 10px;
+}
+
+#header{
+     height: 200px;
+     padding: 5px 0px 0px 0px;
+}
+
+#navContainer{
+     max-width: 960px;
+}
+
+/* #navContainer, .headerBlock{
+     height: 200px;
+} */
+
+.spacerDiv{
+     height: 80px;
+}
+
+.spacerDiv2{
+     height: 52.5px;
+}
+
+#navLogoBlock{
+     padding: 5px;
+}
+
+#navLogo{
+     height: 180px;
+}
+
+.productLink{
+     margin-right: 20px;
+}
+
+#apptCallout p{
+     width: 90%;
+     text-align: center;
+     margin: 0px auto;
+     font-size: 2.5em;
+     font-weight: 300;
+     text-transform: uppercase;
+     padding: 15px 0px 15px 0px;
+}
+
+.review{
+     height: 200px;
+}
+
+.imgDiv{
+     padding: 0px 0px;
+}
+ 
+ #reccomendations{
+     padding: 20px 20px;
+ }
+
+#mapDiv{
+     padding: 0px 0px 0px 0px;
+}
+
+#map{
+     height: 400px;
+     width: 100%;
+     padding: 0px 0px;
+}
+
+#footerRow{
+     padding: 15px 0px;
+}
+
+
+#instaGrid{
+     width: 200px;
+     height: 200px;
+     background: url(../images/instagrid.png);
+}
+
+#gallery{
+     margin: 20px 0px;
+}
+
+#galleryContainer, #servicesFixedContainer{
+     max-width: 960px;
+}
+
+#servicesFixedContainer{
+     padding: 30px 0px;
+}
+
+#servicesContainer .row{
+     margin: 5px 0px;
+}
+
+.serviceName{
+     text-align: right;
+}
+
+.serviceSpacer{
+     height: 23px;
+     border-bottom: 1px dotted black;
+     padding: 0px 0px;
+}
+
+.serviceName, .servicePrice{
+     padding: 0px 0px 0px 0px;
+}
+
+.serviceName p, .servicePrice p{
+     margin: 0px 0px 0px 0px;
+}
+
+.serviceName p{
+     padding: 0px 10px 0px 0px;
+}
+
+.servicePrice p{
+     padding: 0px 0px 0px 10px;
+}
+
+#servicesHeader{
+     height: 300px;
+     background: url(../images/services.jpg);
+}
+
+#productsHeader{
+     height: 300px;
+     background: url(../images/products3.jpg);
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES                   
+/*******************************************/
+
+.black {
+     background: black;
+     color: white;
+}
+
+.white{
+     background: white;
+     max-width: 960px;
+}
+
+.scriptFont{
+     font-family: 'Rouge Script', 'Lato', Helvetica, sans-serif;
+     font-size: 1.6em;
+}
+
+.striped{
+     background: url(../images/stripe.png);
+}
+
+h1{
+     text-align: center;
+     font-family: 'Lato', Helvetica, sans-serif;
+     text-transform: uppercase;
+     font-weight: 900;
+     font-size: 5.0em;
+     margin: 0px 0px;
+     padding: 100px 0px 0px 0px;
+     color: white;
+     text-shadow: #474747 0.05em 0.05em 0.05em
+}
+
+h2, h3, li{
+     font-family: 'Lato', Helvetica, sans-serif;
+     text-transform: uppercase;
+     font-weight: 900;
+}
+
+h2{
+     font-size: 3em;
+}
+
+h3, li {
+     font-size: 1.5em;
+     margin: 0px 0px;
+}
+
+h3{
+     margin: 0px 0px 10px 0px;
+}
+
+i{
+     font-size: 1.8em;
+}
+
+li{
+    list-style-type: none;
+}
+
+.reviewP{
+     text-align: center;
+     font-size: 2.0em;
+     font-weight: 900;
+     padding: 25px 40px;
+     margin: auto;
+}
+
+#getHereText a, section a{
+     color: black;
+}
+
+.navLink{
+     font-family: 'Lato', Helvetica, sans-serif;
+     text-transform: uppercase;
+     font-weight: 900;
+     font-size: 1.5em;
+     text-decoration: none;
+
+}
+
+.footerNavLink {
+     font-family: 'Lato', Helvetica, sans-serif;
+     text-transform: uppercase;
+     font-weight: 900;
+     text-decoration: none;
+}
+
+.activeNav{
+     text-decoration: underline;
+}
+
+p{
+     font-size: 1.4em;
+}
+
+#footerNav li{
+     padding: 0px 0px 10px 0px;
+}
+
+#footerContactInfo ul{
+     padding: 0px 0px;
+}
+
+#footerContactInfo li{
+     list-style-type: none;
+     font-weight: 400;
+     font-size: 1.5em;
+     text-transform: none;
+     padding: 0px 0px 10px 0px;
+
+}
+
+#footerContactInfo i{
+     font-size: 1.7em;
+     padding-right: 10px;
+}
+
+/******************************************
+/* BOOTSTRAP & MASONRY STYLES                   
+/*******************************************/
+
+
+.bg-black {
+     background: #000;
+     color: #fff;
+}
+
+.btn {
+     text-decoration: none;
+
+}
+
+.btn-primary {
+     background: #fff;
+     color: #000;
+     border: none;
+}
+
+.grid-item{
+          margin-bottom: 10px;
+     }
+
+.grid-item-content {
+  height: 100px;
+  background: #D26;
+  border: 2px solid hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+
+.grid-item-content--height2 { height: 200px; }
+
+/******************************************
+/* GALLERY ANIMATION                
+/*******************************************/
+
+/* Effect 2: Move Up */
+.grid.effect-2 .grid-item.animate {
+     -webkit-transform: translateY(200px);
+     transform: translateY(200px);
+     -webkit-animation: moveUp 0.65s ease forwards;
+     animation: moveUp 0.65s ease forwards;
+}
+
+@-webkit-keyframes moveUp {
+     0% { }
+     100% { -webkit-transform: translateY(0); opacity: 1; }
+}
+
+@keyframes moveUp {
+     0% { }
+     100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+}
+
+/******************************************
+/* RESPONSIVE                  
+/*******************************************/
+
+@media only screen and (max-width: 480px) {
+     
+     #header{
+     height: 100%;
+     }
+
+     .centerAlign{
+          text-align: center;
+     }
+
+     #homeHeaderBlock{
+          display: none;
+     }
+
+     #navLogoBlock{
+          width: 100%;
+     }
+
+     #rightHeaderBlock{
+          width: 100%;
+     }
+
+     .spacerDiv2{
+          height: 10px;
+     }
+
+     #lastNav{
+          margin: 0px 0px 10px 0px;
+     }
+
+     #banner{
+          display: none;
+     }
+
+     #apptCallout{
+          background: white;
+          color: black;
+     }
+
+     .grid-item{
+          width: 100%;
+     }
+}
+
+@media (min-width: 992px) {
+     #rightHeaderBlock div{
+          padding: 0px 0px;
+     }
+}
+
+
+/******************************************
+/* TRASH                 
+/******************************************
+
+
+.item, .heroImg{
+     min-height: 300px;
+}
+
+.serviceName{
+     width: 40%;
+     float: left;
+     text-align: right;
+}
+
+.servicePrice{
+     width: 40%;
+     float: left;
+}
+
+.serviceSpacer{
+     width: 10%;
+     height: 18px;
+     border-bottom: 1px dashed black;
+     float: left;
+     margin: 0px 6px;
+}
+
+*/
